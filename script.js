@@ -24,14 +24,14 @@ submitElement.addEventListener("click", () => {
     }
     tryAgain.style.display = "inline";
   } else if (number.value > 100) {
-    startElement.textContent = "choose a number from 1-100";
+    startElement.textContent = "Choose a number from 1-100";
   } else if (number.value < guess) {
     if (attempt > 1) {
       startElement.textContent = "Number Too Low";
       attempt--;
       attemptElement.textContent = attempt;
     } else {
-      startElement.textContent = "you lost the game";
+      startElement.textContent = "You lost the game";
       attemptElement.textContent = 0;
       answer.textContent = guess;
       number.disabled = true;
@@ -43,7 +43,7 @@ submitElement.addEventListener("click", () => {
       attempt--;
       attemptElement.textContent = attempt;
     } else {
-      startElement.textContent = "you lost the game";
+      startElement.textContent = "You lost the game";
       attemptElement.textContent = 0;
       answer.textContent = guess;
       number.disabled = true;
@@ -54,7 +54,7 @@ submitElement.addEventListener("click", () => {
 
 tryAgain.addEventListener("click", () => {
   guess = Math.floor(Math.random() * 100 + 1);
-  startElement.textContent = "start guessing...";
+  startElement.textContent = "Start guessing...";
   answer.textContent = "?";
   attempt = 3;
   attemptElement.textContent = attempt;
